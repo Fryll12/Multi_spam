@@ -582,7 +582,7 @@ def enhanced_spam_loop():
     while True:
         try:
             active_spam_servers = [s for s in servers if s.get('spam_enabled') and s.get('spam_channel_id') and s.get('spam_message')]
-            active_bots = [bot_id for bot_id, data in bot_manager.get_all_bots_data() if bot_states["active"].get(bot_id) and data.get('instance')]
+            active_bots = [bot_id for bot_id, data in bot_manager.get_sub_bots_info() if bot_states["active"].get(bot_id) and data.get('instance')]
             
             if not active_spam_servers or not active_bots:
                 time.sleep(5)
@@ -644,7 +644,7 @@ def ultra_optimized_spam_loop():
     while True:
         try:
             active_spam_servers = [s for s in servers if s.get('spam_enabled') and s.get('spam_channel_id') and s.get('spam_message')]
-            active_bots = [bot_id for bot_id, data in bot_manager.get_all_bots_data() if bot_states["active"].get(bot_id) and data.get('instance')]
+            active_bots = [bot_id for bot_id, data in bot_manager.get_sub_bots_info() if bot_states["active"].get(bot_id) and data.get('instance')]
             
             if not active_spam_servers or not active_bots:
                 time.sleep(5); continue
