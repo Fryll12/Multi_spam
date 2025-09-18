@@ -296,7 +296,7 @@ async def handle_grab(bot, msg, bot_num):
                             
                             if valid_cards:
                                 max_index, max_num = max(valid_cards, key=lambda x: x[1])
-                                delays = {1: [0.35, 1.35, 2.05], 2: [0.7, 1.8, 2.4], 3: [0.7, 1.8, 2.4], 4: [0.8, 1.9, 2.5]}
+                                delays = {1: [0.2, 1.1, 2], 2: [0.7, 1.8, 2.4], 3: [0.7, 1.8, 2.4], 4: [0.8, 1.9, 2.5]}
                                 bot_delays = delays.get(bot_num, [0.9, 2.0, 2.6])
                                 emoji = ["1️⃣", "2️⃣", "3️⃣"][max_index]
                                 delay = bot_delays[max_index]
