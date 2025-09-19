@@ -229,7 +229,7 @@ async def _find_and_select_card(bot, channel_id, last_drop_msg_id, heart_thresho
                             await asyncio.sleep(1.2)
                             if ktb_channel_id:
                                 ktb_channel = bot.get_channel(int(ktb_channel_id))
-                                if ktb_channel: await ktb_channel.send("kt b")
+                                if ktb_channel: await ktb_channel.send("kt fs")
                             print(f"[CARD GRAB | Bot {bot_num}] ✅ Đã grab và gửi kt b", flush=True)
                         except discord.errors.NotFound:
                              print(f"[CARD GRAB | Bot {bot_num}] ⚠️ Drop message not found.", flush=True)
@@ -381,7 +381,7 @@ async def handle_grab(bot, msg, bot_num):
                 if ktb_channel_id:
                     ktb_channel = bot.get_channel(int(ktb_channel_id))
                     if ktb_channel:
-                        await ktb_channel.send("kt b")
+                        await ktb_channel.send("kt fs")
                 print(f"[GRAB CTRL | Bot {bot_num}] ✅ NHẶT THẺ THÀNH CÔNG!", flush=True)
             except Exception as e:
                 print(f"[GRAB CTRL | Bot {bot_num}] ❌ Lỗi khi thực hiện nhặt thẻ: {e}", flush=True)
