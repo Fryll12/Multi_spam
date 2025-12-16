@@ -259,7 +259,7 @@ async def handle_grab(bot, msg, bot_num):
                 emoji_name = reaction.emoji if isinstance(reaction.emoji, str) else reaction.emoji.name
                 
                 # Kiểm tra kẹo 🎀
-                if '🍬' in emoji_name:
+                if '🎀' in emoji_name:
                     await target_message.add_reaction("🎀")
                     print(f"[GRAB CTRL | Bot {bot_num}] ✅ NHẶT KẸO (🎀) THÀNH CÔNG!", flush=True)
                     break # Dừng lại sau khi nhặt
@@ -1009,7 +1009,7 @@ def api_watermelon_toggle():
     if node not in bot_states["watermelon_grab"]: return jsonify({'status': 'error', 'message': 'Invalid bot node.'}), 404
     bot_states["watermelon_grab"][node] = not bot_states["watermelon_grab"].get(node, False)
     status_msg = 'ENABLED' if bot_states["watermelon_grab"][node] else 'DISABLED'
-    return jsonify({'status': 'success', 'message': f"🍬 Global Watermelon Grab đã {status_msg} cho {get_bot_name(node)}."})
+    return jsonify({'status': 'success', 'message': f"🎀 Global Watermelon Grab đã {status_msg} cho {get_bot_name(node)}."})
 
 @app.route("/api/broadcast_toggle", methods=['POST'])
 def api_broadcast_toggle():
